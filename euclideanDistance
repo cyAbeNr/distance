@@ -1,11 +1,16 @@
 import math
-points = [(x1, y1), (x2, y2)]  
-def euclideanDistance(x1,x2,y1,y2):  
-    return math.sqrt((x2[0] - x1[0])**2 + (y2[1] - y1[1])**2)
+points = [(xE1, yE1), (xE2, yE2), (xF1, yF1), (xF2, yF2)]  
+    q = F[0] - E[0] 
+    r = F[1] - E[1]  
+    p = math.sqrt(q*2 + r*2)
       distances = []  
-for i in range(len(points)):  
+
+return p
+or i in range(len(points)):
     for j in range(i + 1, len(points)):  
-        distances.append(euclideanDistance(points[i], points[j]))  
-min_distance = min(distances)  
-      print("Euclidean Distance(:", distances)  
-      print("Minimum Euclidean Distance:", min_distance)
+        E = points[i]
+        F = points[j]
+        distance = euclideanDistance(E, F)
+        distances.append(distance)
+min_distance = min(distances)
+print("En küçük mesafe:", min_distance)
